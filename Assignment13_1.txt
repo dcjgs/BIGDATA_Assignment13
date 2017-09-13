@@ -1,0 +1,33 @@
+
+Spark
+
+A C A D G I L D 
+1. How are worker, executor and task related to each other?
+Spark Task: A Spark Task represents a unit of work on a partition of a distributed dataset. 
+Spark Executor: A single JVM instance on a node that serves a single Spark application. 
+An executor runs multiple tasks over its lifetime, and multiple tasks concurrently.
+A node may have several Spark executors and there are many nodes running Spark Executors 
+for each client application.
+
+2. What are the key features of Spark?
+Faster In-Memory Processing. an application will have processes, called Executors, 
+running on the cluster on its behalf even when it’s not running any jobs. This approach 
+enables data storage in memory for quick access, as well as lightning-fast task startup time.
+
+3. What is Spark Driver?
+Spark Driver: The Spark driver is the process running the spark context 
+(which represents the application session). This driver is responsible for 
+converting the application to a directed graph of individual steps to execute
+ on the cluster. There is one driver per application.
+ 
+4. What are the benefits of Spark over MapReduce?
+Spark provides faster processing, no disk/io involved.
+MapReduce runs each task in its own process. When a task completes, the process goes away.
+In Spark, many tasks can run concurrently in a single process, and this process sticks 
+around for the lifetime of the Spark application, even when no jobs are running.
+
+5. What is Spark Executor?
+Spark Executor: A single JVM instance on a node that serves a single Spark application. 
+An executor runs multiple tasks over its lifetime, and multiple tasks concurrently.
+A node may have several Spark executors and there are many nodes running Spark Executors 
+for each client application.
